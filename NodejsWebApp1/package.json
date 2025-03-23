@@ -6,6 +6,9 @@
   "author": {
     "name": ""
   },
+  "scripts": {
+    "start": "node server.js"
+  },
   "devDependencies": {
     "eslint": "^8.21.0"
   },
