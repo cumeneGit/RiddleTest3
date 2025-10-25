@@ -1,11 +1,30 @@
-'use strict';
+'use strict'
+const express = require('express');
+const path = require('path');
+const app = express();
+
+const PORT = process.env.PORT || 3000;
+
+// 静的ファイル（HTML, CSS, JS）を配信
+app.use(express.static(path.join(__dirname, 'public')));
+
+// デフォルトページ
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
+
+/*'use strict';
 var http = require('http');
 var port = process.env.PORT || 1337;
 
 http.createServer(function (req, res) {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('Hello World\n');
-}).listen(port);
+}).listen(port);*/
 
 
 /*'use strict';

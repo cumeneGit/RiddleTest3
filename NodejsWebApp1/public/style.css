@@ -1,0 +1,37 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    background: #f7f8fa;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+    nav.tabs a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        transition: background 0.2s;
+    }
+
+        nav.tabs a:hover {
+            background: #555;
+        }
+
+        nav.tabs a.active {
+            background: #0078d7;
+        }
+
+main {
+    padding: 40px;
+    text-align: center;
+}
